@@ -1,0 +1,81 @@
+{
+  "id": "1",
+  "title": "January 2024",
+  "date": "January 2024",
+  "taskDescription": "Build the tallest freestanding tower using only household items! Your tower must stand for at least 30 seconds without support. Get creative with your materials and document the building process. Bonus points for unique engineering solutions!",
+  "submissions": [
+    {
+      "teamName": "The Tower Titans",
+      "score": 5,
+      "description": "Our team built an impressive 2.5-meter tower using books, plastic containers, and tape. We employed a triangular base design for maximum stability and used a counterweight system to prevent tipping. The tower stood strong for over 5 minutes! Our engineering approach focused on distributing weight evenly across multiple support points.",
+      "images": [
+        "images/months/month1/tower-titans-1.jpg",
+        "images/months/month1/tower-titans-2.jpg",
+        "images/months/month1/tower-titans-3.jpg"
+      ],
+      "videos": [
+        "videos/months/month1/tower-titans-build.mp4"
+      ]
+    },
+    {
+      "teamName": "Stack Attack",
+      "score": 4,
+      "description": "We went for height over everything else! Using cardboard boxes, toilet paper rolls, and lots of glue, we managed to reach 2.2 meters. The tower wobbled a bit but stayed standing. Our strategy was to create interlocking compartments that provided both height and stability. The final test was nerve-wracking but successful!",
+      "images": [
+        "images/months/month1/stack-attack-1.jpg",
+        "images/months/month1/stack-attack-2.jpg"
+      ],
+      "videos": [
+        "videos/months/month1/stack-attack-final.mp4"
+      ]
+    },
+    {
+      "teamName": "The Architects",
+      "score": 4,
+      "description": "Our team took a scientific approach, researching bridge engineering principles. We built a 2-meter tower using wooden skewers, marshmallows, and string. The lattice structure we designed was incredibly stable and looked fantastic. We documented every step of the process with detailed sketches and measurements.",
+      "images": [
+        "images/months/month1/architects-1.jpg",
+        "images/months/month1/architects-2.jpg",
+        "images/months/month1/architects-3.jpg"
+      ],
+      "videos": [
+        "videos/months/month1/architects-process.mp4"
+      ]
+    },
+    {
+      "teamName": "Creative Stackers",
+      "score": 3,
+      "description": "We decided to use only recycled materials for our tower. Using newspaper rolls, empty bottles, and cardboard, we constructed a 1.8-meter eco-friendly tower. While not the tallest, we're proud of our sustainable approach and the unique spiral design we created. The tower was surprisingly sturdy!",
+      "images": [
+        "images/months/month1/creative-stackers-1.jpg",
+        "images/months/month1/creative-stackers-2.jpg"
+      ],
+      "videos": []
+    },
+    {
+      "teamName": "The Balancers",
+      "score": 4,
+      "description": "Our strategy was all about balance and symmetry. We used plastic cups, popsicle sticks, and rubber bands to create a 2.1-meter tower with a distinctive hexagonal design. Each level was carefully measured and balanced before adding the next. The end result was both tall and beautiful!",
+      "images": [
+        "images/months/month1/balancers-1.jpg",
+        "images/months/month1/balancers-2.jpg",
+        "images/months/month1/balancers-3.jpg"
+      ],
+      "videos": [
+        "videos/months/month1/balancers-build.mp4"
+      ]
+    },
+    {
+      "teamName": "Sky High Squad",
+      "score": 3,
+      "description": "We built a colorful 1.7-meter tower using LEGO bricks and plastic building blocks. While not as tall as some others, our tower featured a working elevator system and lights! The creativity factor was off the charts, and it was definitely the most playful design of all submissions.",
+      "images": [
+        "images/months/month1/skyhigh-1.jpg",
+        "images/months/month1/skyhigh-2.jpg"
+      ],
+      "videos": [
+        "videos/months/month1/skyhigh-demo.mp4"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Month - Mask Tasker</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🎭 Mask Tasker</h1>
+            <p>The Ultimate Monthly Challenge Game</p>
+        </div>
+    </header>
+
+    <nav id="main-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="results.html">Results</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div id="month-content">
+                <div class="loading">Loading month data</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mask Tasker. All rights reserved.</p>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Get month ID from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const monthId = urlParams.get('id');
+
+        if (!monthId) {
+            document.getElementById('month-content').innerHTML =
+                '<p style="text-align: center; color: red;">No month specified. Please select a month from the home page.</p>';
+        } else {
+            loadMonthData(monthId);
+        }
+
+        async function loadMonthData(monthId) {
+            try {
+                // Load config to get navigation
+                const config = await loadConfig();
+                updateNavigation(config, monthId);
+
+                // Load month-specific data
+                const response = await fetch(`data/months/month${monthId}.json`);
+                if (!response.ok) throw new Error('Month data not found');
+
+                const monthData = await response.json();
+                displayMonthData(monthData);
+            } catch (error) {
+                document.getElementById('month-content').innerHTML =
+                    '<p style="text-align: center; color: red;">Error loading month data. Please check the console.</p>';
+                console.error('Error:', error);
+            }
+        }
+
+        function updateNavigation(config, currentMonthId) {
+            const navList = document.querySelector('#main-nav ul');
+
+            // Add month links to navigation
+            config.months.forEach(month => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = `month.html?id=${month.id}`;
+                a.textContent = month.title;
+                if (month.id === currentMonthId) {
+                    a.classList.add('active');
+                }
+                li.appendChild(a);
+                navList.appendChild(li);
+            });
+        }
+
+        function displayMonthData(data) {
+            document.getElementById('page-title').textContent = `${data.title} - Mask Tasker`;
+
+            const container = document.getElementById('month-content');
+            container.innerHTML = `
+                <div class="month-header">
+                    <h2>${data.title}</h2>
+                    <div class="date">${data.date}</div>
+                    <div class="task-description">
+                        <strong>Task:</strong> ${data.taskDescription}
+                    </div>
+                </div>
+
+                <h3 style="margin-bottom: 1.5rem; color: var(--primary-color);">Team Submissions</h3>
+                <div class="submissions" id="submissions-container"></div>
+            `;
+
+            const submissionsContainer = document.getElementById('submissions-container');
+
+            data.submissions.forEach(submission => {
+                const submissionDiv = document.createElement('div');
+                submissionDiv.className = 'submission';
+
+                let mediaHTML = '';
+                if (submission.images && submission.images.length > 0) {
+                    mediaHTML += '<div class="media-grid">';
+                    submission.images.forEach(image => {
+                        mediaHTML += `<img src="${image}" alt="${submission.teamName}" onclick="openModal(this.src)">`;
+                    });
+                    mediaHTML += '</div>';
+                }
+
+                if (submission.videos && submission.videos.length > 0) {
+                    mediaHTML += '<div class="media-grid">';
+                    submission.videos.forEach(video => {
+                        mediaHTML += `
+                            <video controls>
+                                <source src="${video}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        `;
+                    });
+                    mediaHTML += '</div>';
+                }
+
+                submissionDiv.innerHTML = `
+                    <div class="submission-header">
+                        <h3>${submission.teamName}</h3>
+                        <div class="score">${submission.score} / 5</div>
+                    </div>
+                    <div class="submission-content">
+                        <p>${submission.description}</p>
+                        ${mediaHTML}
+                    </div>
+                `;
+
+                submissionsContainer.appendChild(submissionDiv);
+            });
+        }
+
+        // Image modal functionality
+        function openModal(src) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = 'block';
+            modalImg.src = src;
+        }
+
+        document.querySelector('.close').onclick = function() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        document.getElementById('imageModal').onclick = function(e) {
+            if (e.target === this) {
+                this.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

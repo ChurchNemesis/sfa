@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mask Tasker - Monthly Challenge Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🎭 Mask Tasker</h1>
+            <p>The Ultimate Monthly Challenge Game</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="results.html">Results</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section class="hero">
+                <h2>Welcome to Mask Tasker!</h2>
+                <p>
+                    Mask Tasker is an exciting monthly challenge game where teams compete to complete
+                    creative and fun tasks. Each month brings a new challenge, and teams showcase their
+                    submissions through photos and videos. Creativity, humor, and originality are key to
+                    scoring high! Browse through the monthly challenges below to see what teams have
+                    accomplished and check out the overall results to see who's leading the competition.
+                </p>
+            </section>
+
+            <section>
+                <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary-color);">Monthly Challenges</h2>
+                <div id="months-container" class="months-grid">
+                    <div class="loading">Loading months</div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mask Tasker. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Load and display months on home page
+        loadConfig().then(config => {
+            const container = document.getElementById('months-container');
+
+            if (!config.months || config.months.length === 0) {
+                container.innerHTML = '<p style="text-align: center;">No months available yet. Check back soon!</p>';
+                return;
+            }
+
+            container.innerHTML = '';
+            config.months.forEach(month => {
+                const card = document.createElement('a');
+                card.href = `month.html?id=${month.id}`;
+                card.className = 'month-card';
+                card.innerHTML = `
+                    <h3>${month.title}</h3>
+                    <div class="month-date">${month.date}</div>
+                    <div class="month-task"><strong>Task:</strong> ${month.shortDescription}</div>
+                `;
+                container.appendChild(card);
+            });
+        }).catch(error => {
+            document.getElementById('months-container').innerHTML =
+                '<p style="text-align: center; color: red;">Error loading months. Please check the console.</p>';
+            console.error('Error loading months:', error);
+        });
+    </script>
+</body>
+</html>

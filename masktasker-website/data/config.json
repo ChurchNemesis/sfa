@@ -1,0 +1,48 @@
+{
+  "siteName": "Mask Tasker",
+  "siteDescription": "The Ultimate Monthly Challenge Game",
+  "months": [
+    {
+      "id": "1",
+      "title": "January 2024",
+      "date": "January 2024",
+      "shortDescription": "Build the tallest tower using household items"
+    },
+    {
+      "id": "2",
+      "title": "February 2024",
+      "date": "February 2024",
+      "shortDescription": "Create a team music video"
+    },
+    {
+      "id": "3",
+      "title": "March 2024",
+      "date": "March 2024",
+      "shortDescription": "Design and model a team costume"
+    },
+    {
+      "id": "4",
+      "title": "April 2024",
+      "date": "April 2024",
+      "shortDescription": "Cook a 3-course meal in 60 minutes"
+    },
+    {
+      "id": "5",
+      "title": "May 2024",
+      "date": "May 2024",
+      "shortDescription": "Create a stop-motion animation"
+    },
+    {
+      "id": "6",
+      "title": "June 2024",
+      "date": "June 2024",
+      "shortDescription": "Build a miniature golf hole"
+    },
+    {
+      "id": "7",
+      "title": "July 2024",
+      "date": "July 2024",
+      "shortDescription": "Perform a comedy sketch"
+    }
+  ]
+}
