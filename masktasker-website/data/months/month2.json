@@ -2,63 +2,70 @@
   "id": "2",
   "title": "February 2024",
   "date": "February 2024",
-  "taskDescription": "Create an original music video for your team! The song should be at least 2 minutes long and can be an original composition or a creative cover. Show off your musical talents, choreography, and video editing skills!",
+  "taskDescription": "Perform the most spectacular catch! Submissions should be in the form of a single video (though doesn't need to be a single unedited shot). At least one team member must be in the video though incorporation of multiple team members is encouraged. Points will be awarded for difficulty, creativity, flair and dedication.",
   "submissions": [
     {
-      "teamName": "The Tower Titans",
-      "score": 4,
-      "description": "We created a rock-style music video with a theme about building towers (a callback to last month!). Shot in black and white with dramatic lighting, our video featured original lyrics and some impressive guitar solos. The editing was tight and professional.",
-      "images": [
-        "images/months/month2/tower-titans-1.jpg"
-      ],
-      "videos": [
-        "videos/months/month2/tower-titans-music.mp4"
-      ]
-    },
-    {
-      "teamName": "Stack Attack",
+      "teamName": "Cogan, Connal and Justin",
       "score": 5,
-      "description": "Our team went all out with a full pop music production! We wrote original lyrics, created a catchy chorus, and filmed on location at 5 different spots around town. The choreography was synchronized perfectly, and we even had costume changes. This was our best submission yet!",
-      "images": [
-        "images/months/month2/stack-attack-1.jpg",
-        "images/months/month2/stack-attack-2.jpg"
-      ],
-      "videos": [
-        "videos/months/month2/stack-attack-music.mp4"
-      ]
+      "description": "Add description here and upload video to videos/months/month2/",
+      "images": [],
+      "videos": []
     },
     {
-      "teamName": "The Architects",
+      "teamName": "Steph and Stocky",
+      "score": 5,
+      "description": "Add description here and upload video to videos/months/month2/",
+      "images": [],
+      "videos": []
+    },
+    {
+      "teamName": "Jess, George, Alessia and Steph",
       "score": 4,
-      "description": "We took a more artistic approach with an acoustic performance. Our music video was shot in a single continuous take in a beautiful outdoor setting. The harmonies were spot-on, and the natural lighting gave it a professional feel.",
-      "images": [
-        "images/months/month2/architects-1.jpg"
-      ],
-      "videos": [
-        "videos/months/month2/architects-music.mp4"
-      ]
+      "description": "Add description here and upload video to videos/months/month2/",
+      "images": [],
+      "videos": []
     },
     {
-      "teamName": "Creative Stackers",
-      "score": 3,
-      "description": "Our music video was a fun, upbeat comedy song about the challenges of working from home. While the production quality wasn't the highest, the humor and creativity really shined through. We had everyone laughing!",
-      "images": [
-        "images/months/month2/creative-stackers-1.jpg"
-      ],
-      "videos": [
-        "videos/months/month2/creative-stackers-music.mp4"
-      ]
+      "teamName": "Mitya and Rachel",
+      "score": 2,
+      "description": "Add description here and upload video to videos/months/month2/",
+      "images": [],
+      "videos": []
     },
     {
-      "teamName": "The Balancers",
-      "score": 4,
-      "description": "We created a hip-hop music video with slick editing and creative transitions. The rap lyrics were clever and referenced all our previous challenges. Great energy throughout!",
-      "images": [
-        "images/months/month2/balancers-1.jpg"
-      ],
-      "videos": [
-        "videos/months/month2/balancers-music.mp4"
-      ]
+      "teamName": "Fi and Alfie",
+      "score": 2,
+      "description": "Add description here and upload video to videos/months/month2/",
+      "images": [],
+      "videos": []
+    },
+    {
+      "teamName": "Luke and Lauren",
+      "score": 0,
+      "description": "No submission",
+      "images": [],
+      "videos": []
+    },
+    {
+      "teamName": "Bex and Hector",
+      "score": 0,
+      "description": "No submission",
+      "images": [],
+      "videos": []
+    },
+    {
+      "teamName": "Maddie, Maddy, Calum and Jemima",
+      "score": 0,
+      "description": "No submission",
+      "images": [],
+      "videos": []
+    },
+    {
+      "teamName": "Conor, Ben and Ellie",
+      "score": 0,
+      "description": "No submission",
+      "images": [],
+      "videos": []
     }
   ]
 }
